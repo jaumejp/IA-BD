@@ -1,0 +1,11 @@
+No és tant generatiu com fer una distribució.
+
+El que fan és a partir de un text, generar la següent paraula més probable que hauría de venir després d'aquest text. 
+
+Hi han varis paradignes per entrenar això.
+- Posar un blanc on hi ha el text que s'ha de predir. 
+- Pasar-li un corpus, el model analitza les paraules que acostumen a anar juntes. 
+    - A nivell de bigrams: dos paraules seguides en el text. 
+    - Analitzem totes les paraules i mirem els parells de paraules. Donada una paraules predim la seguent. És un aproach simple i això es va complicant, i d'aquí surten els transformes. 
+    - Mecanisme de self atention. el que fa es veure si una paraula està relacionada amb la inmediatament anterior o si té una relació més forta amb paraules de la frase. 
+    

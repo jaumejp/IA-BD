@@ -1,0 +1,3 @@
+coses: 
+	- posar 6 classes
+	- segurament hi ha un parametre que fa multiclass i multi object detection

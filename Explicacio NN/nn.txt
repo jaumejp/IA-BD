@@ -1,0 +1,17 @@
+straight cnn és el pas
+
+padding cnn t'inventes que al final segueix
+
+feature extraction cnn, convertir una informacio en un vector
+
+capes de convolucion cnn
+
+capes de pooling cnn
+
+rest net cnn, arquitectures de procesament de imatges kernel, polling stripe, van probant i son les que funcionen (feature straction)
+
+cosine similarity
+
+embeding, vector gran si esta aprop d'un altre vector gran, amb dos dimensions ho hem de conservar
+
+embeding, hight dimensional space vs low dimensional space

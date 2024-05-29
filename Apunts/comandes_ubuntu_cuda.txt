@@ -1,0 +1,100 @@
+instal·lar ubuntu: wsl --install -d ubuntu
+
+user: jaume
+pwd: jaume
+
+Instal·lar drivers de kuda (per comunicar amb la gpu):
+
+falta a la maquina ubuntu: 
+
+conda deactivate per sortir
+sudo apt install jupyter (fora del conda) de ubuntu 
+
+i a dins del entorn 
+conda install sklearn
+conda install -c donda forge notebook=6.4 
+conda install (la ultima comanda)
+
+--- 
+
+a la carpeta usuaru > .ssh > crear fitxer: 
+config 
+amb
+
+Host W10
+	HostName 10.98.1.5
+	User j.juan
+
+Host Ubuntu
+	HostName 172.19.253.74
+	User jaume
+	ProxyJump W10
+
+---
+
+Activar ssh a la maquina windows: 
+
+sistema > características opcionales > añadir > open ssh server
+
+s'ha d'activar: 
+
+servicios > buscar: openSSH SSH Server i boto dret > propietats i posar en automatic i activar
+
+Al ubuntu
+
+sudo apt install openssh-server
+sudo /etc/init.d/ssh enable
+sudo /etc/init.d/ssh start
+sudo service ssh status (per comprobar-ho)
+
+Crear el fitxer al portatil:
+
+a la carpeta usuaru > .ssh > crear fitxer: 
+config 
+amb
+
+Host W10
+	HostName 10.98.1.5
+	User j.juan
+
+Host Ubuntu
+	HostName 172.19.253.74
+	User jaume
+	ProxyJump W10
+
+Obrir una terminal i fer ssh Ubuntu
+
+conda activate entorn
+
+----
+
+Desde el meu portatil: 
+
+ssh -L 8888:localhost:8888 Ubuntu
+conda activate entorn
+jupyter notebook --no-browser --port 8888
+
+
+
+---
+
+per veure com s'entrena: 
+
+
+conda install: 
+
+	conda install conda-forge::tensorboard
+
+Entrem amb una terminal: 
+
+	ssh -L 6006:localhost:6006 Ubuntu
+
+entrar al entorn
+executem tensorboard
+
+	tensorboard --logdir models/log --host localhost --port 6006
+
+--logdir on ha d'anar a mirar els logs, 
+
+i hi anem (al chrome) per veure-ho
+
